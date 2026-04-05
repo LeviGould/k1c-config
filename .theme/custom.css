@@ -118,27 +118,37 @@
     transform: translateY(-1px);
 }
 
-/* --- NEW: HOMING & WARNING BUTTONS (Dark Blue) --- */
+/* --- HOMING & WARNING BUTTONS (Vibrant Dark Blue) --- */
 .theme--dark .v-btn.warning,
-.theme--dark .v-btn.v-btn--contained.warning {
-    background-color: #193C4F !important; /* Deep Navy/Teal */
+.theme--dark .v-btn.v-btn--contained.warning,
+.theme--dark .v-btn.warning.v-btn--outlined {
+    background-color: #22607D !important; /* Brighter, punchier dark blue */
+    border-color: #22607D !important;     /* KILLS the default orange border */
     color: #ffffff !important;
     border-radius: 4px !important;
     text-transform: none !important; 
     letter-spacing: 0.5px !important;
-    box-shadow: 0 2px 8px rgba(25, 60, 79, 0.2) !important; 
+    box-shadow: 0 2px 8px rgba(34, 96, 125, 0.4) !important; 
     transition: all 0.2s ease;
+    outline: none !important;             /* KILLS any orange focus outline */
 }
 
-.theme--dark .v-btn.warning:hover {
-    background-color: #204A61 !important; /* Slightly lighter on hover */
-    box-shadow: 0 4px 12px rgba(25, 60, 79, 0.4) !important; 
+.theme--dark .v-btn.warning:hover,
+.theme--dark .v-btn.warning.v-btn--outlined:hover {
+    background-color: #2A799E !important; /* Lighter/brighter on hover */
+    border-color: #2A799E !important;     
+    box-shadow: 0 4px 12px rgba(34, 96, 125, 0.6) !important; 
     transform: translateY(-1px);
 }
 
-/* Fixes any floating warning text to match the new dark blue */
+/* Ensure icons inside warning buttons stay white */
+.theme--dark .v-btn.warning .v-icon {
+    color: #ffffff !important;
+}
+
+/* Fixes any floating text to match the K1C accent */
 .theme--dark .warning--text {
-    color: #4B9CB8 !important; /* Mapped back to main accent so text is legible on dark backgrounds */
+    color: #4B9CB8 !important; 
 }
 
 /* Sliders, Switches, Progress Bars */
