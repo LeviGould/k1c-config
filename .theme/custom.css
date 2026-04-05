@@ -54,7 +54,6 @@
 }
 
 /* --- TOP APP BAR: EMERGENCY STOP ONLY --- */
-/* Special styling ONLY for the red Emergency Stop/Error buttons at the top */
 .theme--dark .v-app-bar .v-btn.error--text,
 .theme--dark .v-app-bar .v-btn.v-btn--icon.error--text {
     background-color: rgba(244, 67, 54, 0.1) !important;
@@ -117,6 +116,29 @@
 .v-btn.primary:hover {
     box-shadow: 0 4px 12px rgba(75, 156, 184, 0.4) !important; 
     transform: translateY(-1px);
+}
+
+/* --- NEW: HOMING & WARNING BUTTONS (Dark Blue) --- */
+.theme--dark .v-btn.warning,
+.theme--dark .v-btn.v-btn--contained.warning {
+    background-color: #193C4F !important; /* Deep Navy/Teal */
+    color: #ffffff !important;
+    border-radius: 4px !important;
+    text-transform: none !important; 
+    letter-spacing: 0.5px !important;
+    box-shadow: 0 2px 8px rgba(25, 60, 79, 0.2) !important; 
+    transition: all 0.2s ease;
+}
+
+.theme--dark .v-btn.warning:hover {
+    background-color: #204A61 !important; /* Slightly lighter on hover */
+    box-shadow: 0 4px 12px rgba(25, 60, 79, 0.4) !important; 
+    transform: translateY(-1px);
+}
+
+/* Fixes any floating warning text to match the new dark blue */
+.theme--dark .warning--text {
+    color: #4B9CB8 !important; /* Mapped back to main accent so text is legible on dark backgrounds */
 }
 
 /* Sliders, Switches, Progress Bars */
