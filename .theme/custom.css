@@ -1,0 +1,138 @@
+/* 1. LOCAL FONT IMPORT */
+@font-face {
+    font-family: 'Inter';
+    src: url('./Inter-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+/* Global Font Override */
+.v-application, 
+.v-application .text-h1, 
+.v-application .text-h2, 
+.v-application .text-h3, 
+.v-application .text-h4, 
+.v-application .text-h5, 
+.v-application .text-h6, 
+.v-card__title,
+.v-btn {
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* 2. BASE BACKGROUND */
+.theme--dark.v-application {
+    background-color: #0A0C0E !important; 
+    color: #E2E8F0 !important;
+}
+
+/* 3. PANELS & SIDEBAR */
+/* Completely kill the Mainsail sidebar background image overlay */
+.v-navigation-drawer__image {
+    display: none !important;
+    background-image: none !important;
+}
+
+.theme--dark.v-card,
+.theme--dark.v-navigation-drawer,
+.theme--dark .v-app-bar {
+    background-color: rgba(23, 26, 31, 0.75) !important; 
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 6px !important; 
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important; 
+}
+
+/* Keep App Bar flush at the top */
+.theme--dark .v-app-bar {
+    border-radius: 0px !important;
+}
+
+/* Hide the App Bar/Toolbar Title */
+.theme--dark .v-app-bar .v-toolbar__title {
+    display: none !important;
+}
+
+/* --- TOP APP BAR: EMERGENCY STOP ONLY --- */
+/* Special styling ONLY for the red Emergency Stop/Error buttons at the top */
+.theme--dark .v-app-bar .v-btn.error--text,
+.theme--dark .v-app-bar .v-btn.v-btn--icon.error--text {
+    background-color: rgba(244, 67, 54, 0.1) !important;
+    border: 1px solid rgba(244, 67, 54, 0.3) !important;
+    border-radius: 4px !important;
+    margin-left: 4px !important;
+    margin-right: 4px !important;
+    transition: all 0.2s ease;
+}
+
+.theme--dark .v-app-bar .v-btn.v-btn--icon.error--text:hover {
+    background-color: rgba(244, 67, 54, 0.2) !important;
+    border-color: rgba(244, 67, 54, 0.4) !important;
+    transform: translateY(-1px);
+}
+
+/* 4. TABLES */
+.theme--dark.v-data-table {
+    background-color: transparent !important;
+}
+
+.theme--dark.v-data-table > .v-data-table__wrapper > table > thead > tr > th {
+    color: #4B9CB8 !important; 
+    background-color: rgba(0, 0, 0, 0.2) !important; 
+    border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.75rem !important;
+}
+
+.theme--dark.v-data-table > .v-data-table__wrapper > table > tbody > tr > td {
+    border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+    color: #CBD5E1 !important;
+}
+
+.theme--dark.v-data-table > .v-data-table__wrapper > table > tbody > tr:hover:not(.v-data-table__expanded__content) {
+    background-color: rgba(75, 156, 184, 0.1) !important; 
+}
+
+/* 5. ACCENTS & BUTTONS */
+.primary--text,
+.v-list-item--active .v-list-item__icon,
+.v-list-item--active .v-list-item__title {
+    color: #4B9CB8 !important;
+}
+
+/* Primary Content Buttons */
+.v-btn.primary,
+.v-btn.v-btn--contained.primary {
+    background-color: #4B9CB8 !important;
+    color: #ffffff !important;
+    border-radius: 4px !important; 
+    text-transform: none !important; 
+    letter-spacing: 0.5px !important;
+    box-shadow: 0 2px 8px rgba(75, 156, 184, 0.2) !important; 
+    transition: all 0.2s ease;
+}
+
+.v-btn.primary:hover {
+    box-shadow: 0 4px 12px rgba(75, 156, 184, 0.4) !important; 
+    transform: translateY(-1px);
+}
+
+/* Sliders, Switches, Progress Bars */
+.v-progress-linear__determinate,
+.v-slider__track-fill,
+.v-input--switch.v-input--is-label-active .v-input--switch__track {
+    background-color: #4B9CB8 !important;
+}
+
+.v-slider__thumb,
+.v-input--switch.v-input--is-label-active .v-input--switch__thumb {
+    background-color: #4B9CB8 !important;
+    border-color: #4B9CB8 !important;
+}
+
+.v-badge__badge.primary {
+    background-color: #4B9CB8 !important;
+    color: #ffffff !important;
+}
